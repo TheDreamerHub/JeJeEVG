@@ -28,7 +28,7 @@
         .timeline-item {
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Ajouté pour l'alternance */
+            justify-content: flex-start;
             margin-bottom: 2rem;
             z-index: 10;
         }
@@ -36,7 +36,7 @@
             justify-content: flex-end;
         }
         .timeline-item .content-card {
-            width: calc(50% - 2rem); /* Réduction de la largeur pour laisser de la place au milieu */
+            width: calc(50% - 2rem);
         }
         .timeline-item:nth-child(odd) .content-card {
             margin-right: 2rem;
@@ -58,7 +58,7 @@
             font-size: 2rem;
             z-index: 10;
             transition: transform 0.2s, background-color 0.2s;
-            position: absolute; /* Position absolue pour le centrage sur la ligne */
+            position: absolute;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -89,6 +89,13 @@
         .btn:hover {
             background-color: #7C3AED;
         }
+        .map-preview {
+            border-radius: 1rem;
+            margin-top: 1rem;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
         /* Mobile styles */
         @media (max-width: 768px) {
             .timeline-line {
@@ -101,7 +108,7 @@
                 margin-bottom: 3rem;
             }
             .timeline-item:nth-child(even) {
-                justify-content: flex-start; /* Réinitialise le justify-content pour mobile */
+                justify-content: flex-start;
             }
             .timeline-item .content-card {
                 width: 100%;
@@ -127,7 +134,8 @@
 <body class="p-4 sm:p-8">
     <header class="text-center py-10 mb-10">
         <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">Programme EVG de Jérôme</h1>
-        <p class="mt-2 text-xl text-gray-600">Préparez-vous à une journée de folie !</p>
+        <p class="mt-2 text-xl text-gray-600">Samedi 16/08/2025</p>
+        <p class="mt-1 text-xl text-gray-600">Préparez-vous à une journée de folie !</p>
     </header>
 
     <main class="timeline-container relative max-w-4xl mx-auto">
@@ -140,6 +148,9 @@
                 <p class="text-gray-600">On commence la journée en douceur avec un délicieux brunch pour faire le plein d'énergie.</p>
                 <p class="text-sm font-semibold text-pink-500 mt-2">~30€</p>
                 <a href="https://maps.app.goo.gl/dDM8zHbHRHctWvdJ6" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block btn">Voir le lieu</a>
+                <a href="https://maps.app.goo.gl/dDM8zHbHRHctWvdJ6" target="_blank" rel="noopener noreferrer">
+                    <img src="https://placehold.co/400x200/c3cfe2/000000?text=Brunch" alt="Aperçu du lieu du brunch" class="map-preview">
+                </a>
             </div>
             <div class="icon-circle">🥐</div>
         </div>
@@ -170,6 +181,9 @@
                 <p class="text-gray-600">Rendez-vous à Saint Lazare pour un dîner convivial et festif.</p>
                 <p class="text-sm font-semibold text-pink-500 mt-2">~30€</p>
                 <a href="https://maps.app.goo.gl/YpehY8Uho2KB6cpX6" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block btn">Voir le lieu</a>
+                <a href="https://maps.app.goo.gl/YpehY8Uho2KB6cpX6" target="_blank" rel="noopener noreferrer">
+                    <img src="https://placehold.co/400x200/c3cfe2/000000?text=Flam's+St+Lazare" alt="Aperçu du restaurant Flam's" class="map-preview">
+                </a>
             </div>
             <div class="icon-circle">🍽️</div>
         </div>
@@ -195,6 +209,12 @@
                     <a href="https://maps.app.goo.gl/DrBuSJTuc1pQWnQu8" target="_blank" rel="noopener noreferrer" class="btn">Bar 1</a>
                     <a href="https://maps.app.goo.gl/erH5yhnHPuQG1FkC7" target="_blank" rel="noopener noreferrer" class="btn">Bar 2</a>
                 </div>
+                <a href="https://maps.app.goo.gl/DrBuSJTuc1pQWnQu8" target="_blank" rel="noopener noreferrer">
+                    <img src="https://placehold.co/400x100/c3cfe2/000000?text=Bar+1" alt="Aperçu du bar 1" class="map-preview mt-2">
+                </a>
+                <a href="https://maps.app.goo.gl/erH5yhnHPuQG1FkC7" target="_blank" rel="noopener noreferrer">
+                    <img src="https://placehold.co/400x100/c3cfe2/000000?text=Bar+2" alt="Aperçu du bar 2" class="map-preview mt-2">
+                </a>
             </div>
             <div class="icon-circle">🍻</div>
         </div>
@@ -204,22 +224,22 @@
     <!-- Règles et Budget -->
     <section class="max-w-4xl mx-auto mt-12 bg-white rounded-3xl p-8 shadow-xl">
         <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Les Règles et Informations Clés</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="flex items-start">
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="flex-1 flex items-start">
                 <div class="icon-circle text-2xl mr-4 flex-shrink-0 !border-pink-500 !text-pink-500">👕</div>
                 <div>
                     <h4 class="font-bold text-lg mb-1">Le T-shirt de Jérôme</h4>
                     <p class="text-gray-600">Apportez un marqueur pour lui laisser un message, un dessin ou une signature indélébile !</p>
                 </div>
             </div>
-            <div class="flex items-start">
+            <div class="flex-1 flex items-start">
                 <div class="icon-circle text-2xl mr-4 flex-shrink-0 !border-pink-500 !text-pink-500">💬</div>
                 <div>
                     <h4 class="font-bold text-lg mb-1">Anecdotes Personnelles</h4>
                     <p class="text-gray-600">Pendant le jeu de piste, chacun partagera une anecdote avec le futur marié.</p>
                 </div>
             </div>
-            <div class="flex items-start">
+            <div class="flex-1 flex items-start">
                 <div class="icon-circle text-2xl mr-4 flex-shrink-0 !border-pink-500 !text-pink-500">❓</div>
                 <div>
                     <h4 class="font-bold text-lg mb-1">Questions & Gages</h4>
