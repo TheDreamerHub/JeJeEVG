@@ -95,6 +95,10 @@
             width: 100%;
             height: auto;
             object-fit: cover;
+            display: none; /* Cache par défaut */
+        }
+        .link-container:hover .map-preview {
+            display: block; /* Affiche au survol */
         }
         /* Mobile styles */
         @media (max-width: 768px) {
@@ -128,6 +132,9 @@
                 left: 0;
                 transform: translateX(0);
             }
+            .link-container:hover .map-preview {
+                display: none; /* Désactive l'aperçu au survol sur mobile */
+            }
         }
     </style>
 </head>
@@ -147,10 +154,10 @@
                 <h3 class="text-xl font-bold text-gray-800 mb-2">11h00 - 14h00 : Brunch</h3>
                 <p class="text-gray-600">On commence la journée en douceur avec un délicieux brunch pour faire le plein d'énergie.</p>
                 <p class="text-sm font-semibold text-pink-500 mt-2">~30€</p>
-                <a href="https://maps.app.goo.gl/dDM8zHbHRHctWvdJ6" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block btn">Voir le lieu</a>
-                <a href="https://maps.app.goo.gl/dDM8zHbHRHctWvdJ6" target="_blank" rel="noopener noreferrer">
-                    <img src="https://placehold.co/400x200/c3cfe2/000000?text=Brunch" alt="Aperçu du lieu du brunch" class="map-preview">
-                </a>
+                <div class="link-container inline-block">
+                    <a href="https://maps.app.goo.gl/dDM8zHbHRHctWvdJ6" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block btn">Voir le lieu</a>
+                    <img src="https://placehold.co/400x200/c3cfe2/000000?text=Lieu+du+Brunch" alt="Aperçu du lieu du brunch" class="map-preview">
+                </div>
             </div>
             <div class="icon-circle">🥐</div>
         </div>
@@ -180,10 +187,10 @@
                 <h3 class="text-xl font-bold text-gray-800 mb-2">18h00 - 20h00 : Dîner au Flam's</h3>
                 <p class="text-gray-600">Rendez-vous à Saint Lazare pour un dîner convivial et festif.</p>
                 <p class="text-sm font-semibold text-pink-500 mt-2">~30€</p>
-                <a href="https://maps.app.goo.gl/YpehY8Uho2KB6cpX6" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block btn">Voir le lieu</a>
-                <a href="https://maps.app.goo.gl/YpehY8Uho2KB6cpX6" target="_blank" rel="noopener noreferrer">
+                <div class="link-container inline-block">
+                    <a href="https://maps.app.goo.gl/YpehY8Uho2KB6cpX6" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block btn">Voir le lieu</a>
                     <img src="https://placehold.co/400x200/c3cfe2/000000?text=Flam's+St+Lazare" alt="Aperçu du restaurant Flam's" class="map-preview">
-                </a>
+                </div>
             </div>
             <div class="icon-circle">🍽️</div>
         </div>
@@ -206,15 +213,15 @@
                 <p class="text-gray-600">On termine la soirée en beauté pour célébrer Jérôme comme il se doit !</p>
                 <p class="text-sm font-semibold text-pink-500 mt-2">~10€</p>
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="https://maps.app.goo.gl/DrBuSJTuc1pQWnQu8" target="_blank" rel="noopener noreferrer" class="btn">Bar 1</a>
-                    <a href="https://maps.app.goo.gl/erH5yhnHPuQG1FkC7" target="_blank" rel="noopener noreferrer" class="btn">Bar 2</a>
+                    <div class="link-container inline-block">
+                        <a href="https://maps.app.goo.gl/DrBuSJTuc1pQWnQu8" target="_blank" rel="noopener noreferrer" class="btn">Bar 1</a>
+                        <img src="https://placehold.co/400x100/c3cfe2/000000?text=Bar+1" alt="Aperçu du bar 1" class="map-preview mt-2">
+                    </div>
+                    <div class="link-container inline-block">
+                        <a href="https://maps.app.goo.gl/erH5yhnHPuQG1FkC7" target="_blank" rel="noopener noreferrer" class="btn">Bar 2</a>
+                        <img src="https://placehold.co/400x100/c3cfe2/000000?text=Bar+2" alt="Aperçu du bar 2" class="map-preview mt-2">
+                    </div>
                 </div>
-                <a href="https://maps.app.goo.gl/DrBuSJTuc1pQWnQu8" target="_blank" rel="noopener noreferrer">
-                    <img src="https://placehold.co/400x100/c3cfe2/000000?text=Bar+1" alt="Aperçu du bar 1" class="map-preview mt-2">
-                </a>
-                <a href="https://maps.app.goo.gl/erH5yhnHPuQG1FkC7" target="_blank" rel="noopener noreferrer">
-                    <img src="https://placehold.co/400x100/c3cfe2/000000?text=Bar+2" alt="Aperçu du bar 2" class="map-preview mt-2">
-                </a>
             </div>
             <div class="icon-circle">🍻</div>
         </div>
